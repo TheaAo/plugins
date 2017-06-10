@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            html,body{
+                height: 100%;
+                overflow: hidden;
+            }
+            .container, .sections, .section {
+                height: 100%;
+                position: relative;
+            }
+            .sections {
+                width: 100%;
+            }
+            .section {
+                width: 100%;
+                background-size: cover; 
+                background-position: 50% 50%;
+            }
+            .left {
+                float: left;
+                width: 25%;
+            }
+            #section0 {
+                background-image: url(1.jpg);
+            }
+            #section1 {
+                background-image: url(2.jpg);
+            }
+            #section2 {
+                background-image: url(3.jpg);
+            }
+            #section3 {
+                background-image: url(4.jpg);
+            }
+            .pages{
+                position:absolute;
+                list-style: none;
+            }
+            .vertical.pages{
+                right: 10px;
+                top: 50%;
+            }
+            .horizontal.pages{
+                left: 50%;
+                bottom: 10px;
+            }
+            .pages li{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #fff;
+                margin: 10px 5px;
+                cursor: pointer;
+            }
+            .horizontal.pages li{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .pages li.active {
+                width: 14px;
+                height: 14px;
+                border: 2px solid #FFFE00;
+                background: none;
+                margin-left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" data-PageSwitch>
+            <div class="sections">
+                <div class="section" id="section0"></div>
+                <div class="section" id="section1"></div>
+                <div class="section" id="section2"></div>
+                <div class="section" id="section3"></div>
+            </div>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        <script src="pageSwitch.js"></script>
+    </body>
+</html>
